@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Counter</string>
+    <string name="button_text">%1$d %2$s</string>
+</resources>
