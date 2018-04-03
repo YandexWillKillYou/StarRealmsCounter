@@ -2,32 +2,38 @@ package ru.degeneration.counter
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.content.Intent
+import android.view.View
+import android.widget.Button
+import android.widget.LinearLayout
+
 
 class MainActivity : AppCompatActivity() {
-    private val counters = ArrayList<Counter>()
-
-
+    val game: Game = Game()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        createMockCounters()
+
+        game.createMockCounters()
         bindMockCounters()
     }
 
-    private fun createMockCounters(){
-        val nik = Counter("Никита")
-        val art = Counter("Артем")
-        nik.value = 75
-        art.value = 75
-
-        counters.add(nik)
-        counters.add(art)
+    fun bindCounter(counter: Counter){
+        val button = Button(this)
+        CounterViewController(counter, button,this)
+        (resources.getLayout(R.layout.activity_main) as LinearLayout).addView(button)
     }
 
     private fun bindMockCounters(){
-        CounterView(counters[0], findViewById(R.id.button0), applicationContext)
-        CounterView(counters[1], findViewById(R.id.button1), applicationContext)
+        for(counter in game.counters){
+            bindCounter(counter)
+        }
+    }
+
+    fun createCounter(view: View) {
+        val intent = Intent(this@MainActivity, CreateCounterActivity::class.java)
+        startActivity(intent)
     }
 
 }
