@@ -9,5 +9,7 @@ class Game{
         nik.value = 75
         art.value = 75
         counters.add(art)
+        counters.add(nik)
+
     }
 }
