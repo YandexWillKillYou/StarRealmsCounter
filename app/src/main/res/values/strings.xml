@@ -16,4 +16,11 @@
         completions."
     </string>
     <string name="AddCounterButtonText">+</string>
+    <string name="addCounterButtonText">Ещё игрок</string>
+    <string name="hueLabelText">Hue</string>
+    <string name="saturationLabelText">Saturation</string>
+    <string name="valueLabelText">Value</string>
+    <string name="defaultNickOffer">Nick</string>
+    <string name="addCounter">Add</string>
+    <string name="counter_name">Nick</string>
 </resources>

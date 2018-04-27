@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".ru.degeneration.counter.activities.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--Opens virtual keyboard at start of activity to type nickname-->
+        <activity
+            android:name=".ru.degeneration.counter.activities.CreateCounterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible"
+        />
     </application>
-
 </manifest>

@@ -4,6 +4,8 @@ import android.content.Context
 import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
+import ru.degeneration.counter.ru.degeneration.counter.model.Change
+import ru.degeneration.counter.ru.degeneration.counter.model.Counter
 
 /**
  * Created by МасловАМ on 30.03.2018
