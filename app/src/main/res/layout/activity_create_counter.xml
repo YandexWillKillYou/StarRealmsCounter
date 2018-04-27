@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CreateCounterLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ru.degeneration.counter.activities.CreateCounterActivity"
@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="14"
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"/>
     <SeekBar
         android:id="@+id/HueBar"
+        android:max="360"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -34,20 +35,22 @@
         android:layout_height="wrap_content"/>
     <SeekBar
         android:id="@+id/SaturationBar"
+        android:max="255"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/valueLabel"
-        android:text="@string/saturationLabelText"
+        android:text="@string/valueLabelText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <SeekBar
         android:id="@+id/ValueBar"
+        android:max="255"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/AddCounterButton"
+        android:id="@+id/CommitNewCounterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/addCounter"

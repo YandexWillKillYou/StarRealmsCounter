@@ -1,20 +1,20 @@
 package ru.degeneration.counter.ru.degeneration.counter.model
 
 class Game{
+    var defaultHP=75
     val counters = ArrayList<Counter>()
 
+    fun registerCounter(counter: Counter){
+        counter.value=defaultHP
+        counters.add(counter)
+    }
+
     fun createMockCounters(){
-        val and = Counter("Андрей")
+        val nik = Counter("Никита")
         val art = Counter("Артем")
-        val ann = Counter("Аня")
-        val geo = Counter("Гоша")
-        and.value = 75
-        art.value = 75
-        ann.value = 75
-        geo.value = 75
+        nik.value = defaultHP
+        art.value = defaultHP
         counters.add(art)
-        counters.add(ann)
-        counters.add(and)
-        counters.add(geo)
+        counters.add(nik)
     }
 }
